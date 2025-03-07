@@ -1,5 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 
 abstract class AuthEvent {}
+
+class AuthenticationSuccessEvent extends AuthEvent {
+  final User user;
+  AuthenticationSuccessEvent(this.user);
+}
 
 class LoginEvent extends AuthEvent {
   final String email;

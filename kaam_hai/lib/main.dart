@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           primaryColor: const Color(0xFF6200EE),
-          scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+          scaffoldBackgroundColor: const Color(0xFF6200EE),
           colorScheme: ColorScheme.fromSwatch().copyWith(
             primary: const Color(0xFF6200EE),
             secondary: const Color(0xFF03DAC6),
