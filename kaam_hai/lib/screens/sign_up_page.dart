@@ -22,14 +22,9 @@ class _SignUpPageState extends State<SignUpPage> {
   bool isLoading = false;
   String verificationId = '';
 
-  void navigateToLoginPage() {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => LoginPage(
-          phoneNumber: phoneController.text,
-          verificationId: verificationId,
-        ),
-      ),
+  void navigateToHomePage() {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (context) => const HomePage()),
     );
   }
 
@@ -128,7 +123,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: isLoading ? null : () {
-                            // Add your OTP verification logic here
+                            navigateToHomePage();
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF6200EE),

@@ -22,16 +22,15 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
-  void verifyOTP() {
-    if (otpController.text.length != 6) {
-      _handleError('Please enter a valid 6-digit OTP');
-      return;
-    }
-
-    setState(() => isLoading = true);
+  void navigateToHomePage() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(builder: (context) => const HomePage()),
     );
+  }
+
+  void verifyOTP() {
+    setState(() => isLoading = true);
+    navigateToHomePage();
   }
 
   void _handleError(String message) {
@@ -113,3 +112,4 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+}
